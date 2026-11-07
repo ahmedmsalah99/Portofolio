@@ -10,7 +10,7 @@
 <meta property="og:image" content="assets/media/reel.jpg">
 <meta name="theme-color" content="#f4f2ec">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;else if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.theme='dark'}catch(e){}</script>
+<script>try{const t=localStorage.getItem('theme');if(t==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -27,9 +27,9 @@
     </a>
     <nav class="nav__links" aria-label="Main">
       <a href="index.html#skills">Skills</a>
+      <a href="index.html#experience">Experience</a>
       <a href="index.html#projects">Projects</a>
       <a href="index.html#reel">Showreel</a>
-      <a href="index.html#experience">Experience</a>
       <a href="index.html#hire">Hire me</a>
     </nav>
     <button class="theme" type="button" data-theme-toggle aria-label="Switch to dark mode"><span aria-hidden="true"></span></button>
@@ -155,6 +155,30 @@
     </div>
   </div>
 
+  <!-- EXPERIENCE -->
+  <section class="sec" id="experience" aria-labelledby="exp-h">
+    <div class="wrap exp">
+      <header class="sec__head">
+        <p class="kicker">Experience</p>
+        <h2 id="exp-h">3 years in industry. 6 years freelancing.</h2>
+      </header>
+      <ol class="timeline">
+        <li class="is-now"><span class="when">2025 – 2026</span><div><h3>Robotics software engineer</h3><p class="where">Hertel Robotics · remote, Portugal</p><p>Autonomy for a multirotor landing on a moving ship deck: state estimation, guidance and the mission state machine in C++ and ROS&nbsp;2 on PX4. Over 95% success in 4 storm scenarios.</p></div></li>
+        <li><span class="when">2025 – 2026</span><div><h3>Research collaboration</h3><p class="where">LAAS-CNRS · remote, Toulouse</p><p>Robust model predictive control from scratch, with a wind disturbance observer.</p></div></li>
+        <li><span class="when">2024 – 2027</span><div><h3>MSc Robotics Engineering</h3><p class="where">University of Genoa</p><p>Thesis: visual-servoed autonomous landing of a UAV on a catamaran.</p></div></li>
+        <li><span class="when">2022 – 2024</span><div><h3>Embedded software engineer</h3><p class="where">Appraid-Tech, for Honda · Egypt</p><p>A safety-critical Adaptive AUTOSAR gateway in MISRA C++, verified on target hardware in Japan. Mentored 2 engineers.</p></div></li>
+        <li><span class="when">2020 – now</span><div><h3>Freelance developer and deep learning engineer</h3><p class="where">Upwork, Freelancer and direct clients</p><p>Vision, medical imaging, NLP, data and web apps, including a call-centre automation for a company in Germany.</p></div></li>
+        <li><span class="when">2017 – 2022</span><div><h3>BSc Communication and Information Engineering</h3><p class="where">Zewail City of Science and Technology</p></div></li>
+      </ol>
+      <dl class="facts">
+        <div><dt>Start</dt><dd>Available now</dd></div>
+        <div><dt>Work permit</dt><dd>No sponsorship needed in Italy; elsewhere the employer sponsors one</dd></div>
+        <div><dt>Location</dt><dd>Genoa, remote, or a move within Europe, Saudi Arabia or Egypt</dd></div>
+        <div><dt>Languages</dt><dd>Arabic native · English C1 · Italian A2</dd></div>
+      </dl>
+    </div>
+  </section>
+
   <!-- PROJECTS -->
   <section class="sec" id="projects" aria-labelledby="projects-h">
     <div class="wrap">
@@ -219,29 +243,6 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="sec" id="experience" aria-labelledby="exp-h">
-    <div class="wrap exp">
-      <header class="sec__head">
-        <p class="kicker">Experience</p>
-        <h2 id="exp-h">3 years in industry. 6 years freelancing.</h2>
-      </header>
-      <ol class="timeline">
-        <li class="is-now"><span class="when">2025 – 2026</span><div><h3>Robotics software engineer</h3><p class="where">Hertel Robotics · remote, Portugal</p><p>Autonomy for a multirotor landing on a moving ship deck: state estimation, guidance and the mission state machine in C++ and ROS&nbsp;2 on PX4. Over 95% success in 4 storm scenarios.</p></div></li>
-        <li><span class="when">2025 – 2026</span><div><h3>Research collaboration</h3><p class="where">LAAS-CNRS · remote, Toulouse</p><p>Robust model predictive control from scratch, with a wind disturbance observer.</p></div></li>
-        <li><span class="when">2024 – 2027</span><div><h3>MSc Robotics Engineering</h3><p class="where">University of Genoa</p><p>Thesis: visual-servoed autonomous landing of a UAV on a catamaran.</p></div></li>
-        <li><span class="when">2022 – 2024</span><div><h3>Embedded software engineer</h3><p class="where">Appraid-Tech, for Honda · Egypt</p><p>A safety-critical Adaptive AUTOSAR gateway in MISRA C++, verified on target hardware in Japan. Mentored 2 engineers.</p></div></li>
-        <li><span class="when">2020 – now</span><div><h3>Freelance developer and deep learning engineer</h3><p class="where">Upwork, Freelancer and direct clients</p><p>Vision, medical imaging, NLP, data and web apps, including a call-centre automation for a company in Germany.</p></div></li>
-        <li><span class="when">2017 – 2022</span><div><h3>BSc Communication and Information Engineering</h3><p class="where">Zewail City of Science and Technology</p></div></li>
-      </ol>
-      <dl class="facts">
-        <div><dt>Start</dt><dd>Available now</dd></div>
-        <div><dt>Work permit</dt><dd>No sponsorship needed in Italy; elsewhere the employer sponsors one</dd></div>
-        <div><dt>Location</dt><dd>Genoa, remote, or a move within Europe, Saudi Arabia or Egypt</dd></div>
-        <div><dt>Languages</dt><dd>Arabic native · English C1 · Italian A2</dd></div>
-      </dl>
-    </div>
-  </section>
 </main>
 
 <footer class="foot" id="contact">

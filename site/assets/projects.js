@@ -158,11 +158,11 @@ window.PROJECTS = [
     tagline: 'Pose-based action recognition on live video, 100x faster.',
     skills: ['ai', 'vision'],
     metrics: [['98%+', 'accuracy on a new dataset'], ['100x', 'faster end-to-end pipeline']],
-    media: { type: 'figure', text: '98%' },
+    media: { type: 'img', src: 'illustrations/action-recognition.svg', alt: 'Illustration: pose keypoints tracked over frames, turned into an action', credit: 'Illustration' },
     summary: 'Fine-tuned Pose3D for action recognition on a new dataset and rebuilt the inference system for real-time video.',
     built: ['Fine-tuning that reached more than 98% accuracy on the client\'s dataset.', 'Threading and pipeline optimisation that made the whole system about 100 times faster.'],
     stack: ['Python', 'Deep learning', 'Pose3D', 'Image processing'],
-    gallery: [], links: [],
+    gallery: [{ type: 'img', src: 'illustrations/action-recognition.svg', alt: 'Illustration: pose keypoints tracked over frames, turned into an action', credit: 'Illustration' }], links: [],
   },
   {
     slug: 'lung-tumour', title: 'Lung tumour segmentation', year: '', where: 'Freelance', size: 's',
@@ -191,11 +191,11 @@ window.PROJECTS = [
     tagline: 'Speech recognition for the spoken letters of the Arabic alphabet.',
     skills: ['ai'],
     metrics: [['First', 'model of its kind']],
-    media: { type: 'figure', text: 'أ ب ت' },
+    media: { type: 'img', src: 'illustrations/arabic-asr.svg', alt: 'Illustration: audio of a spoken letter, its spectrogram and the predicted Arabic letter', credit: 'Illustration' },
     summary: 'The first automatic speech recognition model for spoken Arabic letters, trained to high accuracy.',
     built: ['A speech recognition model for the letters of the Arabic alphabet.', 'High accuracy on spoken letters.'],
     stack: ['Python', 'Deep learning', 'Machine learning'],
-    gallery: [], links: [],
+    gallery: [{ type: 'img', src: 'illustrations/arabic-asr.svg', alt: 'Illustration: audio of a spoken letter, its spectrogram and the predicted Arabic letter', credit: 'Illustration' }], links: [],
   },
   {
     slug: 'arabic-ordering', title: 'Arabic restaurant ordering', year: '', where: 'Freelance', size: 's',
@@ -246,33 +246,33 @@ window.PROJECTS = [
     tagline: '3D occupancy maps from a single camera.',
     skills: ['slam', 'software'],
     metrics: [['1', 'camera, monocular SLAM'], ['3D', 'OctoMap occupancy']],
-    media: { type: 'figure', text: '3D' },
+    media: { type: 'img', src: 'illustrations/lsd-slam.svg', alt: 'Illustration: camera keyframes along a path, building an OctoMap of occupied voxels', credit: 'Illustration' },
     summary: 'Monocular LSD-SLAM in a container with a ROS 2 bridge that publishes keyframe point clouds into a 3D OctoMap.',
     built: ['A Docker image for LSD-SLAM.', 'A ROS 2 bridge from keyframes to point clouds to an OctoMap.'],
     stack: ['C++', 'ROS 2', 'LSD-SLAM', 'OctoMap', 'Docker'],
-    gallery: [], links: [['Code on GitHub', 'https://github.com/ahmedmsalah99/lsd-slam-ros2-with-octomap']],
+    gallery: [{ type: 'img', src: 'illustrations/lsd-slam.svg', alt: 'Illustration: camera keyframes along a path, building an OctoMap of occupied voxels', credit: 'Illustration' }], links: [['Code on GitHub', 'https://github.com/ahmedmsalah99/lsd-slam-ros2-with-octomap']],
   },
   {
     slug: 'robust-mpc', title: 'Robust model predictive control', year: '2026', where: 'LAAS-CNRS', size: 's',
     tagline: 'Control that stays safe when the wind pushes back.',
     skills: ['control'],
     metrics: [['MPC', 'written from scratch'], ['Wind', 'disturbance observer']],
-    media: { type: 'figure', text: 'MPC' },
+    media: { type: 'img', src: 'illustrations/robust-mpc.svg', alt: 'Illustration: a prediction horizon with a robust tube around it, under wind and input limits', credit: 'Illustration' },
     summary: 'Research collaboration with LAAS-CNRS: robust MPC implemented from scratch on a simplified model, with softened constraints and sensitivity analysis.',
     built: ['Robust MPC with softened constraints.', 'A wind disturbance observer, included in the sensitivity analysis.'],
     stack: ['MPC', 'Optimisation', 'Disturbance observers'],
-    gallery: [], links: [],
+    gallery: [{ type: 'img', src: 'illustrations/robust-mpc.svg', alt: 'Illustration: a prediction horizon with a robust tube around it, under wind and input limits', credit: 'Illustration' }], links: [],
   },
   {
     slug: 'autosar-gateway', title: 'Adaptive AUTOSAR gateway', year: '2022–24', where: 'Appraid-Tech for Honda', size: 's',
     tagline: 'Safety-critical C++ between a phone app and the car.',
     skills: ['embedded', 'software'],
     metrics: [['MISRA', 'C++ compliance'], ['Japan', 'verified on target hardware'], ['2', 'engineers mentored']],
-    media: { type: 'figure', text: 'MISRA' },
+    media: { type: 'img', src: 'photos/autosar-gateway.jpg', alt: 'An engine control unit, the kind of in-vehicle computer AUTOSAR software runs on', credit: 'Panoha · CC BY-SA 3.0 · Wikimedia Commons', page: 'https://commons.wikimedia.org/wiki/File:EDC_ecm.jpg' },
     summary: 'A gateway service that routes and validates remote requests from a mobile app to in-vehicle systems, and the replies back.',
     built: ['Features end to end: requirements, UML, C++, unit tests, verification on target in Japan.', 'ara::com, ara::log and ARXML configuration, with a Docker build.', 'MISRA C++ compliance and coverage with Parasoft C/C++test.'],
     stack: ['C++14', 'Adaptive AUTOSAR', 'MISRA C++', 'Parasoft', 'Docker'],
-    gallery: [], links: [],
+    gallery: [{ type: 'img', src: 'photos/autosar-gateway.jpg', alt: 'An engine control unit, the kind of in-vehicle computer AUTOSAR software runs on', credit: 'Panoha · CC BY-SA 3.0 · Wikimedia Commons', page: 'https://commons.wikimedia.org/wiki/File:EDC_ecm.jpg' }], links: [],
   },
   {
     slug: 'firmware', title: 'Bare-metal and real-time firmware', year: '2025', where: 'MSc', size: 's',
@@ -319,3 +319,77 @@ window.PROJECTS = [
     gallery: [{ type: 'img', src: 'photos/shipment-api.jpg', alt: 'A container ship loaded at port', credit: 'Petar Milošević · CC BY-SA 4.0 · Wikimedia Commons', page: 'https://commons.wikimedia.org/wiki/File:MAERSK_HANOI_Container_Ship_(Port_Koper_SIKOP,_2023).jpg' }], links: [],
   },
 ];
+
+// Deeper write-ups for project pages: how it works (pipeline steps) and engineering decisions.
+window.DETAILS = {
+  'tracking-drone': {
+    how: [
+      ['Camera', 'A USB camera or the Gazebo camera. The stream manager scales frames to 640×480 and caps them at 30 fps.'],
+      ['Zero-copy transport', 'Frames move between nodes over Fast DDS shared memory, so no node copies an image.'],
+      ['Detect and track', 'YOLO on ONNX Runtime runs at 10 Hz; OC-SORT keeps a stable ID for every object through short occlusions.'],
+      ['Pick the target', 'The operator moves the selection to a neighbouring object with the /change_target service.'],
+      ['Follow', 'The Track action server sends velocity commands to ArduPilot to hold, for example, 25 m altitude at 10 m distance.'],
+    ],
+    decisions: [
+      'Every stage is its own ROS 2 package, so the detector can run alone, with another model, or on recorded video.',
+      'Detection runs slower than the camera. Results are time-stamped with a 0.25 s latency budget and drawn on the cached frame they came from (50 frames kept), so boxes never drift.',
+      'One launch file for simulation and a real camera: mode:=sim or mode:=real.',
+      'A modified OC-SORT fork, shipped prebuilt, keeps the C++ build simple.',
+    ],
+  },
+  'px4-swarm': {
+    how: [
+      ['Bridge', 'init.sh starts QGroundControl and the Micro XRCE-DDS agent that carries PX4 topics into ROS 2.'],
+      ['Spawn', 'launch.sh -n N -w world starts N PX4 SITL drones in any Gazebo world, with an optional headless mode.'],
+      ['Elect', 'An election node on every drone runs the bully algorithm over MAVLink; the highest ID leads.'],
+      ['Command', 'command_drone.sh sends takeoff, land, return or a mission to one drone or the whole swarm.'],
+      ['Follow', 'The leader flies a QGroundControl .plan; followers switch to offboard mode and track it.'],
+    ],
+    decisions: [
+      'Re-election is automatic: if the leader goes silent, the swarm picks a new one and keeps flying.',
+      'A swarm manager watches heartbeats and publishes swarm status, separate from control.',
+      'PX4 v1.17 and px4_msgs are pinned together, because a mismatch silently stops all data reaching ROS 2.',
+      'Four scripts replace manual QGroundControl clicking, so the demo reproduces from a clean machine.',
+    ],
+  },
+  'ship-deck-landing': {
+    how: [
+      ['Estimate', 'Fuse AprilTag detections with the ship’s GPS to track the drone and the moving deck.'],
+      ['Approach', 'Fly to the ship and line up behind the deck.'],
+      ['Track', 'Optimisation-based trajectory generation keeps the drone over the moving deck.'],
+      ['Descend', 'Visual servoing turns the deck’s image position into position and velocity setpoints for PX4.'],
+      ['Touch down', 'A phase-based state machine commits to landing, with landing gear designed in Fusion 360.'],
+    ],
+    decisions: [
+      'Guidance sends setpoints to PX4 rather than replacing its low-level controllers, keeping the flight stack proven.',
+      'Two guidance modes, each in the phase where it works best: optimisation far out, visual servoing close in.',
+      'Validated across 4 simulated extreme sea and wind scenarios, with over 95% successful landings.',
+    ],
+  },
+  'marker-mission': {
+    how: [
+      ['Plan', 'A PDDL domain and problem go to the PlanSys2 planner, which returns a sequence of actions.'],
+      ['Move', 'Each move action is a Nav2 goal between hint waypoints, localised with AMCL.'],
+      ['Detect', 'rotateanddetect spins the robot until aruco_opencv sees a marker, then stores its ID and pose.'],
+      ['Unlock', 'finishdetection fires once all 4 markers are known and unlocks the second phase.'],
+      ['Photograph', 'The robot revisits the markers from the lowest ID to the highest and saves a photo of each.'],
+    ],
+    decisions: [
+      'Symbolic planning is separate from execution, so the same action nodes can move to a real robot.',
+      'Preconditions in PDDL enforce the order, rather than hard-coded state in the nodes.',
+    ],
+  },
+  'sarsa-swarm': {
+    how: [
+      ['Observe', 'Each UAV looks only at nearby neighbours, obstacles and its waypoint.'],
+      ['Score', 'Five behaviour modules (target, cohesion, collision, alignment, obstacle) each score headings with their own Q-table, applied per object.'],
+      ['Vote', 'Greatest-mass action selection adds the weighted Q-values and picks the best heading.'],
+      ['Train in phases', 'Phase 1 learns target seeking alone, phase 2 flocking and obstacle avoidance, phase 3 everything together.'],
+    ],
+    decisions: [
+      'Object-focused Q-tables keep the state space tiny however large the swarm grows.',
+      'Module weights and discounts live in YAML, so behaviour can be reshaped without retraining.',
+      'The environment follows the PettingZoo API and has a conformance test.',
+    ],
+  },
+};

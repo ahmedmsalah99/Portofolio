@@ -162,6 +162,7 @@
     document.title = `${p.title} · Ahmed Yousef`;
     const related = P.filter(q => q !== p && q.skills.some(s => p.skills.includes(s))).slice(0, 3);
     const gal = p.gallery || [];
+    const D = (window.DETAILS || {})[p.slug];
     page.innerHTML = `
       <section class="wrap p-top">
         <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html#projects">← All projects</a>${p.skills.slice(0, 1).map(s => `<a href="index.html?skill=${s}#projects">${esc(SK[s])}</a>`).join('')}</nav>
@@ -182,6 +183,8 @@
           ${p.note ? `<p class="p-note">${esc(p.note)}</p>` : ''}</div>
         <div><h2>What I built</h2><ol class="p-built">${p.built.map(b => `<li>${esc(b)}</li>`).join('')}</ol></div>
       </section>
+      ${D ? `<section class="wrap p-how"><h2>How it works</h2><ol class="flow">${D.how.map(([t, d], k) => `<li><span class="flow__n">${k + 1}</span><h3>${esc(t)}</h3><p>${esc(d)}</p></li>`).join('')}</ol>
+        ${D.decisions ? `<div class="p-dec"><h2>Engineering decisions</h2><ul>${D.decisions.map(d => `<li>${esc(d)}</li>`).join('')}</ul></div>` : ''}</section>` : ''}
       ${gal.length ? `<section class="wrap p-gallery"><h2>Gallery</h2><div class="gal">${gal.map((g, k) => `
         <button type="button" data-k="${k}" aria-label="Enlarge: ${esc(g.alt)}">${g.type === 'video' ? video(g.src, { auto: true }) : `<img class="${g.contain ? 'contain' : ''}" src="${M}${g.src}" alt="${esc(g.alt)}" loading="lazy">`}
           <span class="cap">${esc(g.alt)}${g.credit ? `<small>${esc(g.credit)}</small>` : ''}</span></button>`).join('')}</div></section>` : ''}
@@ -219,7 +222,7 @@
   const cl = $('[data-credits]');
   if (cl) {
     const items = [];
-    P.forEach(p => [p.media, ...(p.gallery || [])].forEach(m => { if (m && m.credit && !items.some(x => x.src === m.src)) items.push({ ...m, project: p }); }));
+    P.forEach(p => [p.media, ...(p.gallery || [])].forEach(m => { if (m && m.credit && m.page && !items.some(x => x.src === m.src)) items.push({ ...m, project: p }); }));
     cl.innerHTML = items.map(m => `<li><a href="${m.page}" target="_blank" rel="noopener">${esc(m.alt || m.src)}</a><br><small>${esc(m.credit)} · used on <a href="${url(m.project)}">${esc(m.project.title)}</a></small></li>`).join('');
   }
 })();

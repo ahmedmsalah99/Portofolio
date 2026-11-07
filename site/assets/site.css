@@ -370,3 +370,21 @@ p { margin: 0; }
 
 .logo span:last-child { white-space: nowrap; }
 @media (max-width: 420px) { .logo { font-size: 16px; } .nav__in { gap: 12px; } .nav__cta { padding: 0 14px; } }
+
+/* how it works: a numbered pipeline, and the decisions behind it */
+.p-how { margin-top: 80px; }
+.p-how h2 { font-size: 28px; letter-spacing: -.02em; margin-bottom: 18px; }
+.flow { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; counter-reset: f; }
+.flow li { position: relative; background: var(--card); border-radius: var(--r-sm); padding: 20px 18px 18px; box-shadow: var(--shadow); display: grid; gap: 8px; align-content: start; }
+.flow li:not(:last-child)::after { content: "→"; position: absolute; right: -13px; top: 22px; z-index: 1; width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--accent-ink); font-size: 13px; font-weight: 700; }
+.flow__n { font: 500 12px/1 var(--mono); color: var(--accent); }
+.flow h3 { font-size: 19px; letter-spacing: -.01em; }
+.flow p { color: var(--ink-2); font-size: 15px; line-height: 1.5; }
+.p-dec { margin-top: 48px; }
+.p-dec ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.p-dec li { position: relative; padding: 16px 16px 16px 44px; border-radius: var(--r-sm); background: var(--accent-soft); color: var(--ink); }
+.p-dec li::before { content: "✓"; position: absolute; left: 16px; top: 15px; font-weight: 700; color: var(--accent); }
+@media (max-width: 900px) { .flow li:not(:last-child)::after { right: auto; left: 18px; top: auto; bottom: -13px; content: "↓"; } .p-dec ul { grid-template-columns: 1fr; } }
+
+/* illustrations are shown whole on their own dark ground, never cropped */
+.card__media img[src$=".svg"], .p-stage img[src$=".svg"], .gal img[src$=".svg"] { object-fit: contain; background: #14171b; }
