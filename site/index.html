@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en" data-type="service" data-radius="soft" data-ground="sage" data-buttons="arrow" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahmed Yousef: robotics engineer for drone autonomy</title>
+<meta name="description" content="Ahmed Yousef writes guidance, state estimation and swarm software for drones in C++ and ROS 2 on PX4 and ArduPilot. Based in Genoa, Italy.">
+<meta name="site-kind" content="tech">
+<meta name="page-type" content="service">
+<meta property="og:title" content="Ahmed Yousef: robotics engineer for drone autonomy">
+<meta property="og:description" content="Guidance, state estimation and swarm software for drones in C++ and ROS 2 on PX4 and ArduPilot.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23232323'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='17' font-weight='600' fill='%23a1ffcb' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wdth,wght@85..100,400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #ffffff; --p-surface: #f3f3f3; --p-ink: #232323; --p-muted: #686868;
+  --p-accent: #a1ffcb; --p-accent-ink: #232323; --p-action: #232323; --p-action-ink: #ffffff;
+  --p-inv-bg: #232323; --p-inv-surface: #303030; --p-inv-ink: #ffffff; --p-inv-muted: #a4a4a4;
+  --p-inv-accent: #a1ffcb; --p-inv-accent-ink: #232323; --p-inv-action: #a1ffcb; --p-inv-action-ink: #232323;
+  --font-display: "IBM Plex Sans", system-ui, sans-serif;
+  --font-text: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --display-weight: 500;
+  --display-tracking: -0.025em;
+  --display-tracking-xl: -0.035em;
+  --ly-scale: 0.98;
+}
+</style>
+<link rel="stylesheet" href="assets/ui/base.css">
+<link rel="stylesheet" href="assets/ui/terminal-run/fragment.css">
+<link rel="stylesheet" href="assets/ui/checklist/fragment.css">
+<link rel="stylesheet" href="assets/ui/files/fragment.css">
+<link rel="stylesheet" href="assets/diagrams/diagram.css">
+<script src="assets/backgrounds/backgrounds.js"></script>
+<!-- page CSS: only what sits inside a visual, the rail, and one --p-h per card group -->
+<style>
+  #projects .panel { --p-h: 336px; }
+  #freelance .frame, #skills .frame { height: 600px; }
+  @media (min-width: 1024px) and (max-width: 1279px) { #projects .panel { --p-h: 300px; } #freelance .frame, #skills .frame { height: 520px; } }
+  @media (max-width: 1023px) { #freelance .frame, #skills .frame { height: 440px; } }
+  @media (max-width: 639px) { #freelance .frame { height: 300px; } #skills .frame { height: 232px; } #projects .panel { --p-h: 200px; } }
+
+  /* the hero window: the swarm launch, whole on the lit ground */
+  .hero--split .hero__media.frame { display: block; }
+  .hero__media .stage { position: absolute; inset: 0; }
+  .hero__media > .ly-float { position: absolute; top: auto; bottom: var(--s-5); left: var(--s-5); }
+  @media (max-width: 1023px) { .hero__media > .ly-float { display: none; } }
+  /* frames that hold a fragment or icons stand on the same lit ground as the card panels */
+  .hero__media.frame, #skills .frame, #freelance .frame {
+    background-color: var(--ground-bg, #d9ccb7);
+    background-image:
+      radial-gradient(70% 90% at 12% 0%, color-mix(in oklab, var(--ground-surface, #e9e0d2) 92%, white), transparent 70%),
+      radial-gradient(60% 80% at 100% 100%, color-mix(in oklab, var(--ground-accent, #a8794a) 34%, var(--ground-bg, #d9ccb7)), transparent 72%),
+      radial-gradient(50% 60% at 85% 10%, color-mix(in oklab, var(--ground-surface, #e9e0d2) 60%, transparent), transparent 70%);
+    border: 0;
+  }
+
+  /* experience rail: four roles on one line */
+  .rail { list-style: none; margin: 0; padding: 0; row-gap: var(--s-6); }
+  .rail > li { display: grid; align-content: start; gap: var(--s-2); }
+  .rail .panel { position: relative; height: 112px; margin: 0 0 var(--s-5); display: flex; align-items: center; justify-content: center; gap: var(--s-3); flex-wrap: wrap; padding: var(--s-5); }
+  .rail__mark { position: relative; height: 8px; margin-bottom: var(--s-3); }
+  .rail__mark::before { content: ""; position: absolute; left: 0; top: 0; width: 8px; height: 8px; border-radius: 50%; background: var(--ink); }
+  .rail__mark::after { content: ""; position: absolute; left: 16px; right: -24px; top: 3.5px; height: 1px; background: var(--line); }
+  .rail > li:last-child .rail__mark::after { right: 0; }
+  .rail > li.is-now .rail__mark::before { background: var(--p-accent); box-shadow: 0 0 0 1px var(--ink); }
+  .rail p { color: var(--ink); }
+  @media (min-width: 640px) and (max-width: 1023px) { .rail > li { grid-column: span 6; } .rail .panel { height: 120px; } .rail > li:nth-child(2n) .rail__mark::after { right: 0; } }
+  @media (max-width: 639px) {
+    .rail .panel { display: none; }
+    .rail { row-gap: var(--s-4); }
+    .rail > li { gap: var(--s-1); border-left: 1px solid var(--line); padding-left: var(--s-4); }
+    .rail > li.is-now { border-left-color: var(--ink); }
+    .rail__mark { display: none; }
+  }
+
+  /* the map card: keyframes and the OctoMap they fill, drawn as the viewer shows them */
+  .slam { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .slam .vox { fill: var(--p-accent); stroke: var(--ink); stroke-width: .6; }
+  .slam .vox--side { fill: #6fd9a1; }
+  .slam .vox--top { fill: #c9ffe1; }
+  .slam .kf { fill: none; stroke: var(--ink); stroke-width: 1.2; }
+  .slam .path { fill: none; stroke: var(--ink); stroke-width: 1.2; stroke-dasharray: 3 4; }
+  .slam .pts circle { fill: var(--ink); opacity: .55; }
+  .slam .grow { animation: slam-in 3.2s ease-out 1 both; transform-box: fill-box; transform-origin: 50% 100%; }
+  @keyframes slam-in { 0%, 8% { opacity: 0; transform: scaleY(.2); } 30%, 92% { opacity: 1; transform: none; } 100% { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .slam .grow { animation: none; } }
+
+  /* the tools wall in the skills split */
+  .tools { display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; gap: var(--s-6) var(--s-5); align-content: center; height: 100%; padding: var(--s-7); }
+  .tools > li { display: grid; justify-items: center; gap: var(--s-2); text-align: center; }
+  .tools .t-label { color: var(--ink); }
+  .tools .ic-tile--wide { width: calc(var(--tile) * 1.6); }
+  @media (max-width: 639px) { .tools { padding: var(--s-5); gap: var(--s-5) var(--s-3); } }
+
+  #contact .close__word { font-size: min(200px, (100vw - 2 * var(--gut)) / 6.6); white-space: nowrap; line-height: 1.1; overflow: visible; }
+  .rows__name .ic-tile { vertical-align: middle; margin-right: var(--s-3); }
+  .contact-line { font-family: var(--font-mono); overflow-wrap: anywhere; }
+  @media (max-width: 639px) { .tools .ic-tile--56 { --tile: 40px; } .tools .ic-tile--wide { width: 72px; } }
+</style>
+</head>
+<body>
+<!-- type: service, site-kind tech (a robotics engineer hired for drone autonomy work)
+     deal: hero split, nav mega (link columns, no picture card: no photographs), close word (close-photo dealt, no photograph: dealt again per sections.md 2),
+     footer dark, rhythm space, buttons arrow, mark initial, ground sage, palette white-mint-tiles, type plex
+     moments: none; effect: none; diagrams: swarm hub, tracking lanes -->
+
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="nav__logo" href="#top"><span class="mark mark--initial" aria-hidden="true">A</span>Ahmed Yousef</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item"><a class="nav__link" href="#experience">Experience</a></div>
+      <div class="nav__item">
+        <a class="nav__link" href="#projects">Projects <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <div class="menu-col span-4">
+              <p class="t-label">Drones</p>
+              <a href="#projects">Leader-follower swarm<span>Five PX4 drones, one leader</span></a>
+              <a href="#projects">Tracking drone<span>YOLO and OC-SORT in C++</span></a>
+              <a href="#projects">ArduPilot fixes<span>EKF3 and SmartRTL patches</span></a>
+            </div>
+            <div class="menu-col span-4">
+              <p class="t-label">Mapping and more</p>
+              <a href="#projects">LSD-SLAM with OctoMap<span>3D maps from one camera</span></a>
+              <a href="#more">Visual-inertial odometry<span>R-VIO ported to ROS 2</span></a>
+              <a href="#more">Embedded and real-time<span>dsPIC33, Yocto, kernel modules</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="#skills">Skills</a></div>
+      <div class="nav__item"><a class="nav__link" href="#freelance">Freelance</a></div>
+      <div class="nav__item"><a class="nav__link" href="#faq">Questions</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="mailto:ahmed.msalah99@gmail.com?subject=Hello%20Ahmed">Email Ahmed</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--split" aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text grid hero__grid">
+      <div class="hero__text span-6">
+        <p class="hero__kicker"><span class="dot" aria-hidden="true"></span>MSc Robotics Engineering, University of Genoa, 2026</p>
+        <h1 id="hero-h">Robotics engineer for drone autonomy</h1>
+        <p class="hero__lead">I write guidance, state estimation and swarm software in C++ and ROS&nbsp;2 on PX4 and ArduPilot. Based in Genoa, Italy, open to roles across Europe.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="mailto:ahmed.msalah99@gmail.com?subject=Hello%20Ahmed">Email Ahmed<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="#projects">See projects</a>
+        </div>
+      </div>
+      <div class="hero__media frame span-6 start-7" data-visual>
+        <div class="stage">
+          <div class="at-rise fit" style="--fit-max:520px;--ax:max(24px, 50% - 260px);--ay:176px;--ay-sm:24px" data-ui-loop>
+            <div class="ui ui-panel ui-term" data-ui="terminal-run">
+              <div class="ui-term__head">
+                <span class="ui-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                <span class="ui-term__title">leader-follower-px4</span>
+                <span class="ui-meta">bash</span>
+                <span class="ui-spacer"></span>
+                <span class="ui-chip ui-chip--plain ui-term__branch"><svg viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="3.5" r="1.5"/><circle cx="5" cy="12.5" r="1.5"/><circle cx="11" cy="5.5" r="1.5"/><path d="M5 5v6M11 7c0 2.6-6 1.8-6 4"/></svg>main</span>
+              </div>
+              <div class="ui-term__screen" data-term-screen>
+                <div class="ui-term__track" data-term-track>
+                  <div class="ui-term__ln ui-term__cmd"><span class="ui-term__cwd">~/<span class="ui-term__up">ros2_ws/</span>swarm</span><span class="ui-term__sig">$</span><span class="ui-term__typed" data-term-cmd>./launch_swarm.sh 5</span></div>
+                  <div class="ui-term__ln ui-term__meter" data-term-out data-term-meter><span class="ui-term__bar" style="--p:1"><i></i></span><span class="ui-term__count" data-term-count>5 of 5 drones</span></div>
+                  <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">px4_1 in Gazebo Harmonic</span><span class="ui-term__n">MAVLink up</span><span class="ui-term__t">2.1s</span></div>
+                  <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">px4_2 in Gazebo Harmonic</span><span class="ui-term__n">MAVLink up</span><span class="ui-term__t">2.4s</span></div>
+                  <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">px4_3 in Gazebo Harmonic</span><span class="ui-term__n">MAVLink up</span><span class="ui-term__t">2.6s</span></div>
+                  <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">px4_4 in Gazebo Harmonic</span><span class="ui-term__n">MAVLink up</span><span class="ui-term__t">2.9s</span></div>
+                  <div class="ui-term__ln ui-term__log" data-term-out data-term-step><svg class="ui-term__tick" viewBox="0 0 16 16" aria-hidden="true"><path d="m3.5 8.4 2.8 2.8 6.2-6.4"/></svg><span class="ui-term__path">px4_5 in Gazebo Harmonic</span><span class="ui-term__n">MAVLink up</span><span class="ui-term__t">3.2s</span></div>
+                  <div class="ui-term__ln ui-term__gap" data-term-out aria-hidden="true"></div>
+                  <div class="ui-term__ln ui-term__sum" data-term-out><span class="ui-term__key">Leader</span><span class="ui-term__val">px4_1, bully election</span></div>
+                  <div class="ui-term__ln ui-term__sum" data-term-out><span class="ui-term__key">Followers</span><span class="ui-term__val">4 in offboard mode</span></div>
+                  <div class="ui-term__ln ui-term__done" data-term-out data-term-done><span class="ui-term__ok"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 8.3 2.4 2.4 4.6-5"/></svg></span><b>Swarm ready</b><span class="ui-term__dim">over Micro XRCE-DDS</span></div>
+                  <div class="ui-term__ln ui-term__cmd" data-term-next><span class="ui-term__cwd">~/<span class="ui-term__up">ros2_ws/</span>swarm</span><span class="ui-term__sig">$</span><span class="ui-term__typed"></span><i class="ui-term__caret" aria-hidden="true"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ly-float">
+          <div class="ly-float__row"><span class="ly-live">Ship-deck landing on PX4</span><span>2026</span></div>
+          <div class="ly-float__title">Over 95% success in 4 storm scenarios</div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="experience" aria-labelledby="experience-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="experience-h">Experience in robotics and embedded software. <span class="muted">About 2.5 years of professional C++.</span></h2>
+      </div>
+      <ol class="grid rail">
+        <li class="span-3">
+          <div class="panel" aria-hidden="true">
+            <span class="ic-tile ic-tile--48"><img class="ic" data-icon="pytorch" src="assets/icons/pytorch.svg" alt="" width="29" height="29" loading="lazy" decoding="async"></span>
+            <span class="ic-tile ic-tile--48"><img class="ic" data-icon="python" src="assets/icons/python.svg" alt="" width="29" height="29" loading="lazy" decoding="async"></span>
+            <span class="ic-tile ic-tile--48"><img class="ic" data-icon="react" src="assets/icons/react.svg" alt="" width="29" height="29" loading="lazy" decoding="async"></span>
+          </div>
+          <div class="rail__mark" aria-hidden="true"></div>
+          <p class="t-label muted">2020 to now, part-time</p>
+          <h3 class="t-card">Freelance developer</h3>
+          <p>Deep learning, MRI tumour segmentation and web apps for clients.</p>
+        </li>
+        <li class="span-3">
+          <div class="panel" aria-hidden="true">
+            <span class="ic-tile ic-tile--48"><img class="ic" data-icon="c-plusplus" src="assets/icons/c-plusplus.svg" alt="" width="29" height="29" loading="lazy" decoding="async"></span>
+            <span class="ic-tile ic-tile--48"><img class="ic" data-icon="docker" src="assets/icons/docker.svg" alt="" width="29" height="29" loading="lazy" decoding="async"></span>
+            <span class="ic-tile ic-tile--48"><img class="ic" data-icon="linux-tux" src="assets/icons/linux-tux.svg" alt="" width="29" height="29" loading="lazy" decoding="async"></span>
+          </div>
+          <div class="rail__mark" aria-hidden="true"></div>
+          <p class="t-label muted">2022 to 2024, Appraid-Tech for Honda</p>
+          <h3 class="t-card">Embedded software engineer</h3>
+          <p>A safety-critical Adaptive AUTOSAR gateway in MISRA C++, tested on target hardware in Japan.</p>
+        </li>
+        <li class="span-3">
+          <div class="panel" aria-hidden="true">
+            <span class="ic-tile ic-tile--48"><img class="ic" data-icon="python" src="assets/icons/python.svg" alt="" width="29" height="29" loading="lazy" decoding="async"></span>
+            <span class="ic-tile ic-tile--48"><img class="ic" data-icon="c-plusplus" src="assets/icons/c-plusplus.svg" alt="" width="29" height="29" loading="lazy" decoding="async"></span>
+          </div>
+          <div class="rail__mark" aria-hidden="true"></div>
+          <p class="t-label muted">2025 to 2026, LAAS-CNRS, remote</p>
+          <h3 class="t-card">Robust MPC research</h3>
+          <p>Robust model predictive control from scratch, with a wind disturbance observer.</p>
+        </li>
+        <li class="span-3 is-now">
+          <div class="panel" aria-hidden="true">
+            <span class="ic-tile ic-tile--48 ic-tile--wide"><img class="ic ic-wide" data-icon="logos:ros" src="assets/icons/ros.svg" alt="" width="29" height="29" loading="lazy" decoding="async"></span>
+            <span class="ic-tile ic-tile--48"><img class="ic" data-icon="c-plusplus" src="assets/icons/c-plusplus.svg" alt="" width="29" height="29" loading="lazy" decoding="async"></span>
+            <span class="ic-tile ic-tile--48"><img class="ic" data-icon="logos:opencv" src="assets/icons/opencv.svg" alt="" width="29" height="29" loading="lazy" decoding="async"></span>
+          </div>
+          <div class="rail__mark" aria-hidden="true"></div>
+          <p class="t-label muted">2025 to 2026, Hertel Robotics, remote</p>
+          <h3 class="t-card">Robotics software engineer</h3>
+          <p>Autonomy for a multirotor landing on a moving ship deck, in C++ and ROS&nbsp;2 on PX4.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section g2" id="projects" aria-labelledby="projects-h">
+    <div class="wrap">
+      <div class="group">
+        <div class="section-head">
+          <h2 id="projects-h">Drone and mapping projects. <span class="muted">Each one is open source on GitHub.</span></h2>
+        </div>
+        <div class="grid">
+          <article class="card card--row card--open span-6">
+            <h3>Flies a five-drone PX4 swarm</h3>
+            <p>Leader election over MAVLink with re-election, followers in offboard mode. <a class="link" href="https://github.com/ahmedmsalah99/Leader-Follower-PX4-Simulation">Code on GitHub</a></p>
+            <div class="panel">
+              <div class="dg" data-diagram='{"layout":"hub","alt":"A leader drone coordinates four follower drones and a swarm manager over ROS 2.","center":{"label":"Leader px4_1","icon":"ui:plane"},"spokes":[{"label":"px4_2","icon":"ui:plane"},{"label":"px4_3","icon":"ui:plane"},{"label":"px4_4","icon":"ui:plane"},{"label":"px4_5","icon":"ui:plane"},{"label":"Swarm manager","icon":"ui:heart-pulse"},{"label":"ROS 2 topics","icon":"ui:radio-tower"}]}'></div>
+            </div>
+          </article>
+          <article class="card card--row card--open span-6">
+            <h3>Tracks and follows targets from the air</h3>
+            <p>Zero-copy video on iceoryx, YOLO and OC-SORT on ONNX Runtime, following at up to 10 m/s. <a class="link" href="https://github.com/ahmedmsalah99/TrackingDrone">Code on GitHub</a></p>
+            <div class="panel">
+              <div class="dg" data-dg-still data-diagram='{"layout":"lanes","alt":"Camera frames pass zero-copy through iceoryx to detection, tracking and relative pose, which drive the follow commands.","input":{"label":"Camera","icon":"ui:camera","sub":"Frames"},"core":{"label":"iceoryx","icon":"ui:cpu"},"lanes":[{"label":"YOLO detect","icon":"ui:scan","done":true,"sub":"VisDrone"},{"label":"OC-SORT track","icon":"ui:crosshair","done":true,"sub":"IDs kept"},{"label":"Follow target","icon":"ui:plane","done":true,"sub":"Up to 10 m/s"}]}'></div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="grid">
+        <article class="card card--row card--open span-6">
+          <h3>Fixes bugs in ArduPilot firmware</h3>
+          <p>Barometer-offset simulation across EKF3 and a SmartRTL buffer overflow fix. <a class="link" href="https://github.com/ArduPilot/ardupilot/pull/30698">Pull request on GitHub</a></p>
+          <div class="panel">
+            <div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:340px;--ax:max(24px, 50% - 170px);--ay:40px;--ay-sm:24px">
+              <div class="ui ui-panel ui-checks" data-ui="checklist" data-ui-still>
+                <div class="ui-checks__head">
+                  <div class="ui-title">ArduPilot pull request 30698</div>
+                  <span class="ui-spacer"></span>
+                  <div class="ui-meta" data-checks-count>2 of 5</div>
+                </div>
+                <div class="ui-checks__bar"><i data-checks-bar style="--k:0.4"></i></div>
+                <ul class="ui-checks__list">
+                  <li class="ui-check is-done"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Simulate a barometer offset</span></li>
+                  <li class="ui-check is-done"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Correct it across EKF3</span></li>
+                  <li class="ui-check"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Fix the altitude bug</span></li>
+                  <li class="ui-check"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Fix the SmartRTL overflow</span></li>
+                  <li class="ui-check"><span class="ui-check__box"><svg viewBox="0 0 16 16"><path d="m4.5 8.2 2.3 2.3 4.7-5"/></svg></span><span class="ui-check__label">Prune paths about 10x faster</span></li>
+                </ul>
+              </div>
+            </div></div>
+          </div>
+        </article>
+        <article class="card card--row card--open span-6">
+          <h3>Maps rooms in 3D from one camera</h3>
+          <p>Monocular LSD-SLAM in Docker with a ROS&nbsp;2 bridge that fills an OctoMap. <a class="link" href="https://github.com/ahmedmsalah99/lsd-slam-ros2-with-octomap">Code on GitHub</a></p>
+          <div class="panel" data-visual>
+            <svg class="slam" viewBox="0 0 560 336" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Camera keyframes along a path above the 3D occupancy voxels they produce">
+              <g class="pts">
+                <circle cx="120" cy="96" r="1.6"/><circle cx="138" cy="88" r="1.6"/><circle cx="160" cy="102" r="1.6"/><circle cx="176" cy="84" r="1.6"/><circle cx="204" cy="96" r="1.6"/><circle cx="232" cy="80" r="1.6"/><circle cx="258" cy="92" r="1.6"/><circle cx="290" cy="78" r="1.6"/><circle cx="318" cy="90" r="1.6"/><circle cx="342" cy="74" r="1.6"/><circle cx="372" cy="88" r="1.6"/><circle cx="398" cy="76" r="1.6"/><circle cx="420" cy="92" r="1.6"/><circle cx="440" cy="82" r="1.6"/>
+              </g>
+              <path class="path" d="M110 60 C180 40, 260 70, 330 48 S 430 40, 460 58"/>
+              <g class="kf">
+                <path d="M104 54 l12 0 l-6 10z"/><path d="M190 44 l12 0 l-6 10z"/><path d="M272 58 l12 0 l-6 10z"/><path d="M352 40 l12 0 l-6 10z"/><path d="M448 52 l12 0 l-6 10z"/>
+              </g>
+              <g transform="translate(0 0)">
+                <g class="grow" style="animation-delay:0s"><path class="vox vox--side" d="M96 300 v-60 l24 -12 v60z"/><path class="vox" d="M120 288 v-60 l40 12 v60z"/><path class="vox vox--top" d="M96 240 l24 -12 l40 12 l-24 12z"/></g>
+                <g class="grow" style="animation-delay:.2s"><path class="vox vox--side" d="M136 312 v-96 l24 -12 v96z"/><path class="vox" d="M160 300 v-96 l40 12 v96z"/><path class="vox vox--top" d="M136 216 l24 -12 l40 12 l-24 12z"/></g>
+                <g class="grow" style="animation-delay:.4s"><path class="vox vox--side" d="M176 324 v-48 l24 -12 v48z"/><path class="vox" d="M200 312 v-48 l40 12 v48z"/><path class="vox vox--top" d="M176 276 l24 -12 l40 12 l-24 12z"/></g>
+                <g class="grow" style="animation-delay:.6s"><path class="vox vox--side" d="M232 304 v-120 l24 -12 v120z"/><path class="vox" d="M256 292 v-120 l40 12 v120z"/><path class="vox vox--top" d="M232 184 l24 -12 l40 12 l-24 12z"/></g>
+                <g class="grow" style="animation-delay:.8s"><path class="vox vox--side" d="M272 316 v-72 l24 -12 v72z"/><path class="vox" d="M296 304 v-72 l40 12 v72z"/><path class="vox vox--top" d="M272 244 l24 -12 l40 12 l-24 12z"/></g>
+                <g class="grow" style="animation-delay:1s"><path class="vox vox--side" d="M328 296 v-84 l24 -12 v84z"/><path class="vox" d="M352 284 v-84 l40 12 v84z"/><path class="vox vox--top" d="M328 212 l24 -12 l40 12 l-24 12z"/></g>
+                <g class="grow" style="animation-delay:1.2s"><path class="vox vox--side" d="M368 308 v-40 l24 -12 v40z"/><path class="vox" d="M392 296 v-40 l40 12 v40z"/><path class="vox vox--top" d="M368 268 l24 -12 l40 12 l-24 12z"/></g>
+                <g class="grow" style="animation-delay:1.4s"><path class="vox vox--side" d="M420 292 v-104 l24 -12 v104z"/><path class="vox" d="M444 280 v-104 l40 12 v104z"/><path class="vox vox--top" d="M420 188 l24 -12 l40 12 l-24 12z"/></g>
+              </g>
+            </svg>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="more" style="--hm: 2" aria-labelledby="more-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="more-h">More robotics and embedded work. <span class="muted">From visual odometry to bare-metal firmware.</span></h2>
+      </div>
+      <div class="grid grid--top fill">
+        <ul class="rows span-6">
+          <li><span class="rows__name"><span class="ic-tile ic-tile--32 ic-tile--wide" aria-hidden="true"><img class="ic ic-wide" data-icon="logos:ros" src="assets/icons/ros.svg" alt="" width="19" height="19" loading="lazy" decoding="async"></span>Visual-inertial odometry in ROS&nbsp;2</span><p>Ported R-VIO and added zero-velocity updates, cutting stationary drift 30 to 50% in simulation.</p><a class="rows__value link" href="https://lnkd.in/p/d5UW4VzD">Post</a></li>
+          <li><span class="rows__name"><span class="ic-tile ic-tile--32" aria-hidden="true"><img class="ic" data-icon="python" src="assets/icons/python.svg" alt="" width="19" height="19" loading="lazy" decoding="async"></span>Reinforcement-learning UAV swarm</span><p>A multi-objective SARSA swarm paper built from scratch, simulation engine included.</p><a class="rows__value link" href="https://github.com/ahmedmsalah99/Distributed-UAV-Swarm-Formation-Control-via-Object-Focused-Multi-Objective-SARSA">Code</a></li>
+          <li><span class="rows__name"><span class="ic-tile ic-tile--32" aria-hidden="true"><img class="ic" data-icon="c-plusplus" src="assets/icons/c-plusplus.svg" alt="" width="19" height="19" loading="lazy" decoding="async"></span>YOLOs-CPP restructure</span><p>A C++ YOLO inference library made modular: a build about 8x smaller, batches, CI and benchmarks.</p></li>
+        </ul>
+        <ul class="rows span-6 start-7">
+          <li><span class="rows__name"><span class="ic-tile ic-tile--32" aria-hidden="true"><img class="ic" data-icon="ui:microchip" src="assets/icons/ui-microchip.svg" alt="" width="19" height="19" loading="lazy" decoding="async"></span>Bare-metal dsPIC33 firmware</span><p>Register-level timer, PWM, ADC, SPI and UART drivers on a 2 ms time-triggered scheduler.</p></li>
+          <li><span class="rows__name"><span class="ic-tile ic-tile--32" aria-hidden="true"><img class="ic" data-icon="linux-tux" src="assets/icons/linux-tux.svg" alt="" width="19" height="19" loading="lazy" decoding="async"></span>Real-time Linux</span><p>Rate-monotonic POSIX threads under SCHED_FIFO with measured WCET, and a character-device kernel module.</p></li>
+          <li><span class="rows__name"><span class="ic-tile ic-tile--32" aria-hidden="true"><img class="ic" data-icon="ui:cpu" src="assets/icons/ui-cpu.svg" alt="" width="19" height="19" loading="lazy" decoding="async"></span>Yocto image for BeagleBone Black</span><p>A custom image with a per-process CPU and memory logger as a boot-time systemd service.</p><a class="rows__value link" href="https://github.com/ahmedmsalah99/SystemStatsCollector">Code</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills" aria-labelledby="skills-h">
+    <div class="wrap">
+      <div class="grid grid--top">
+        <div class="span-6 stack-6">
+          <h2 id="skills-h">Skills and tools</h2>
+          <ul class="rows">
+            <li><span class="rows__name">Languages</span><p>C++14/17 and MISRA C++, Python, C, JavaScript.</p></li>
+            <li><span class="rows__name">Robotics</span><p>ROS&nbsp;2, PX4, ArduPilot, MAVLink, Gazebo SITL, EKF and VIO, SLAM, behavior trees.</p></li>
+            <li><span class="rows__name">Vision and learning</span><p>OpenCV, AprilTag, YOLO, OC-SORT, PyTorch, ONNX Runtime, U-Net.</p></li>
+            <li><span class="rows__name">Embedded</span><p>Adaptive AUTOSAR, dsPIC33, POSIX real-time, Linux kernel modules, Yocto.</p></li>
+          </ul>
+        </div>
+        <div class="frame span-6 start-7" data-visual>
+          <ul class="tools" aria-label="Main tools">
+            <li><span class="ic-tile ic-tile--56"><img class="ic" data-icon="c-plusplus" src="assets/icons/c-plusplus.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">C++</span></li>
+            <li><span class="ic-tile ic-tile--56"><img class="ic" data-icon="python" src="assets/icons/python.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">Python</span></li>
+            <li><span class="ic-tile ic-tile--56 ic-tile--wide"><img class="ic ic-wide" data-icon="logos:ros" src="assets/icons/ros.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">ROS 2</span></li>
+            <li><span class="ic-tile ic-tile--56"><img class="ic" data-icon="logos:opencv" src="assets/icons/opencv.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">OpenCV</span></li>
+            <li><span class="ic-tile ic-tile--56"><img class="ic" data-icon="pytorch" src="assets/icons/pytorch.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">PyTorch</span></li>
+            <li><span class="ic-tile ic-tile--56"><img class="ic" data-icon="si:onnx" src="assets/icons/onnx.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">ONNX</span></li>
+            <li><span class="ic-tile ic-tile--56"><img class="ic" data-icon="docker" src="assets/icons/docker.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">Docker</span></li>
+            <li><span class="ic-tile ic-tile--56"><img class="ic" data-icon="linux-tux" src="assets/icons/linux-tux.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">Linux</span></li>
+            <li><span class="ic-tile ic-tile--56"><img class="ic" data-icon="si:cmake" src="assets/icons/cmake.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">CMake</span></li>
+            <li><span class="ic-tile ic-tile--56"><img class="ic" data-icon="logos:git-icon" src="assets/icons/git-icon.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">Git</span></li>
+            <li><span class="ic-tile ic-tile--56"><img class="ic" data-icon="react" src="assets/icons/react.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">React</span></li>
+            <li><span class="ic-tile ic-tile--56"><img class="ic" data-icon="nodejs" src="assets/icons/nodejs.svg" alt="" width="34" height="34" loading="lazy" decoding="async"></span><span class="t-label">Node.js</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="freelance" aria-labelledby="freelance-h">
+    <div class="wrap">
+      <div class="grid grid--top">
+        <div class="span-6 stack-6">
+          <h2 id="freelance-h">Freelance work since 2020</h2>
+          <ul class="rows">
+            <li><span class="rows__name">Deep learning and vision</span><p>Models trained in PyTorch and shipped with ONNX and Docker.</p></li>
+            <li><span class="rows__name">Medical imaging</span><p>A U-Net that segments tumours in MRI, from DICOM data.</p></li>
+            <li><span class="rows__name">Web apps and automation</span><p>React and Node.js apps, PostgreSQL, and Python workflow scripts.</p></li>
+          </ul>
+        </div>
+        <div class="frame span-6 start-7" data-visual>
+          <div class="stage stage--fade-b"><div class="at-rise fit" style="--fit-max:460px;--ax:max(24px, 50% - 230px);--ay:96px;--ay-sm:24px">
+            <div class="ui ui-files" data-ui="files" data-ui-still data-reading="Packing {n} of {total} files">
+              <div class="ui-files__status"><span class="ui-dot"></span><span data-files-status>6 files in one hand-over</span></div>
+              <ul class="ui-files__grid">
+                <li class="ui-file is-done"><span class="ui-file__icon"><svg class="ui-file__glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.25 2.75h8L18.75 7.25v14H6.25z"/><path d="M14 2.75v4.75h4.75M9 12.5h6.5M9 15.5h6.5M9 18.5h4"/></svg></span><span class="ui-file__name">mri_series</span><span class="ui-file__kind">DICOM</span><span class="ui-file__bar"><i></i></span><span class="ui-file__check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 8.2 2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></li>
+                <li class="ui-file is-done"><span class="ui-file__icon"><img data-icon="python" src="assets/icons/python.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span><span class="ui-file__name">train_unet.py</span><span class="ui-file__kind">Python</span><span class="ui-file__bar"><i></i></span><span class="ui-file__check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 8.2 2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></li>
+                <li class="ui-file is-done"><span class="ui-file__icon"><img data-icon="si:onnx" src="assets/icons/onnx.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span><span class="ui-file__name">unet.onnx</span><span class="ui-file__kind">ONNX</span><span class="ui-file__bar"><i></i></span><span class="ui-file__check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 8.2 2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></li>
+                <li class="ui-file is-done"><span class="ui-file__icon"><img data-icon="docker" src="assets/icons/docker.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span><span class="ui-file__name">Dockerfile</span><span class="ui-file__kind">Docker</span><span class="ui-file__bar"><i></i></span><span class="ui-file__check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 8.2 2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></li>
+                <li class="ui-file is-done"><span class="ui-file__icon"><img data-icon="postgres" src="assets/icons/postgres.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span><span class="ui-file__name">schema.sql</span><span class="ui-file__kind">PostgreSQL</span><span class="ui-file__bar"><i></i></span><span class="ui-file__check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 8.2 2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></li>
+                <li class="ui-file is-done"><span class="ui-file__icon"><img data-icon="react" src="assets/icons/react.svg" alt="" width="24" height="24" loading="lazy" decoding="async"></span><span class="ui-file__name">Dashboard.jsx</span><span class="ui-file__kind">React</span><span class="ui-file__bar"><i></i></span><span class="ui-file__check"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4.5 8.2 2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></li>
+              </ul>
+            </div>
+          </div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="grid grid--top">
+        <div class="span-6 stack-4">
+          <h2 id="faq-h">Questions from recruiters</h2>
+          <p class="muted">Work permits, start dates and the roles that fit.</p>
+        </div>
+        <div class="faq span-6 start-7">
+          <div class="faq__item"><h3>When can you start?</h3><p>Now. My MSc in Robotics Engineering at the University of Genoa ends in December 2026.</p></div>
+          <div class="faq__item"><h3>Do you need a visa to work in Italy?</h3><p>No sponsorship in Italy: my residence permit runs to July 2027 and converts to a work permit outside the yearly quota. Elsewhere, the employer sponsors a permit.</p></div>
+          <div class="faq__item"><h3>Where can you work?</h3><p>From Genoa, remotely, or after a move within Europe, to Saudi Arabia or to Egypt.</p></div>
+          <div class="faq__item"><h3>Which roles fit you best?</h3><p>Drone and robot autonomy: swarms, air and ground teams, marine and field robots. Also perception, SLAM, control and embedded work.</p></div>
+          <div class="faq__item"><h3>Which languages do you speak?</h3><p>Arabic natively, English at C1 for all my work and study, and Italian at A2.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--word">
+      <div class="section-head--split">
+        <div><h2 id="close-h">Work with Ahmed on drone autonomy</h2><p class="t-lead">Full-time roles and freelance projects, from Genoa or remote.</p></div>
+        <a class="btn btn--primary" href="mailto:ahmed.msalah99@gmail.com?subject=Hello%20Ahmed">Email Ahmed<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      </div>
+      <p class="close__word" aria-hidden="true">Ahmed Yousef</p>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><span class="mark mark--initial" aria-hidden="true">A</span>Ahmed Yousef</a>
+          <p class="footer__lede">Robotics software engineer in Genoa, Italy. <span class="contact-line">ahmed.msalah99@gmail.com</span></p>
+        </div>
+        <div class="span-2 footer__col"><h4>Work</h4><ul><li><a href="#experience">Experience</a></li><li><a href="#projects">Projects</a></li><li><a href="#more">More work</a></li></ul></div>
+        <div class="span-2 footer__col"><h4>Profile</h4><ul><li><a href="#skills">Skills</a></li><li><a href="#freelance">Freelance</a></li><li><a href="#faq">Questions</a></li></ul></div>
+        <div class="span-2 footer__col"><h4>Online</h4><ul><li><a href="https://github.com/ahmedmsalah99">GitHub</a></li><li><a href="https://www.linkedin.com/in/ahmed-salah-a214a116a/">LinkedIn</a></li></ul></div>
+        <div class="span-2 footer__col"><h4>Code</h4><ul><li><a href="https://github.com/ArduPilot/ardupilot/pull/30698">ArduPilot PR</a></li><li><a href="https://github.com/ahmedmsalah99/Leader-Follower-PX4-Simulation">PX4 swarm</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Ahmed Yousef</span>
+        <span class="t-small">Product names and logos are trademarks of their owners</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+<script type="module" src="assets/diagrams/mount.js"></script>
+</body>
+</html>
