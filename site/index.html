@@ -1,189 +1,267 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ahmed Yousef: robotics and AI engineer</title>
-<meta name="description" content="Robotics and AI engineer in Genoa, Italy. Drone swarms, ship-deck landing, tracking, SLAM, control and deep learning. Hire me on Upwork or Freelancer.">
-<meta property="og:title" content="Ahmed Yousef: robotics and AI engineer">
-<meta property="og:description" content="Drone swarms, ship-deck landing, tracking, SLAM, control and deep learning. 22 projects, each with its own page.">
+<title>Ahmed Yousef · Robotics and AI engineer</title>
+<meta name="description" content="Robotics and AI engineer in Genoa, Italy. Autonomy, perception, control and embedded software for drones, ground robots and anything that moves. Hire me on Upwork or Freelancer.">
+<meta property="og:title" content="Ahmed Yousef · Robotics and AI engineer">
+<meta property="og:description" content="Autonomy, perception, control and embedded software for robots. 22 projects, each with its own page.">
 <meta property="og:image" content="assets/media/reel.jpg">
-<meta name="theme-color" content="#06090a">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2306090a'/%3E%3Cpath d='M4 10V4h6M22 4h6v6M28 22v6h-6M10 28H4v-6' stroke='%237dffb3' stroke-width='2.5' fill='none'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%237dffb3'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#f4f2ec">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<script>try{const t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;else if(matchMedia('(prefers-color-scheme: dark)').matches)document.documentElement.dataset.theme='dark'}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/hud.css">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body class="home">
-<a class="skip" href="#missions">Skip to projects</a>
+<a class="skip" href="#projects">Skip to projects</a>
 
-<header class="bar">
-  <a class="bar__logo" href="#top" aria-label="Ahmed Yousef, home"><span class="bar__mark" aria-hidden="true"></span>AHMED&nbsp;YOUSEF</a>
-  <nav class="bar__nav" aria-label="Main">
-    <a href="#missions">Projects</a>
-    <a href="#flight-log">Experience</a>
-    <a href="#hire">Hire</a>
-  </nav>
-  <div class="bar__status" aria-hidden="true"><span class="led"></span><span>AVAILABLE</span><span class="bar__clock" data-clock>--:--:-- CET</span></div>
-  <button class="bar__term" type="button" data-term-open aria-label="Open the terminal">&gt;_</button>
-  <a class="btn btn--upwork bar__cta" href="https://www.upwork.com/freelancers/~01a0793a19bbeb8d20" target="_blank" rel="noopener">
-    <svg viewBox="-0.48 3.012 24.96 17.976" aria-hidden="true"><path fill="currentColor" d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
-    Hire me on Upwork
-  </a>
+<header class="nav">
+  <div class="nav__in">
+    <a class="logo" href="index.html" aria-label="Ahmed Yousef, home">
+      <span class="logo__bot" aria-hidden="true"><i class="eye"></i><i class="eye"></i></span>
+      <span>Ahmed Yousef</span>
+    </a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#reel">Showreel</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#hire">Hire me</a>
+    </nav>
+    <button class="theme" type="button" data-theme-toggle aria-label="Switch to dark mode"><span aria-hidden="true"></span></button>
+    <a class="btn btn--upwork nav__cta" href="https://www.upwork.com/freelancers/~01a0793a19bbeb8d20" target="_blank" rel="noopener">
+      <svg viewBox="-0.48 3.012 24.96 17.976" aria-hidden="true"><path fill="currentColor" d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+      <span>Hire me</span>
+    </a>
+  </div>
 </header>
 
 <main id="top">
-  <!-- HERO: the showreel seen through a drone's camera -->
-  <section class="hero" aria-labelledby="hero-h">
-    <video class="hero__reel" autoplay muted loop playsinline poster="assets/media/reel.jpg" aria-hidden="true">
-      <source src="assets/media/reel.webm" type="video/webm">
-      <source src="assets/media/reel.mp4" type="video/mp4">
-    </video>
-    <div class="hero__shade" aria-hidden="true"></div>
-    <div class="hud" aria-hidden="true">
-      <span class="hud__corner hud__corner--tl"></span><span class="hud__corner hud__corner--tr"></span>
-      <span class="hud__corner hud__corner--bl"></span><span class="hud__corner hud__corner--br"></span>
-      <div class="hud__cross"><span></span></div>
-      <div class="hud__tl">
-        <span>CAM-01 · SHOWREEL</span>
-        <span class="hud__rec"><i></i>REC</span>
-        <span data-hud-label>TRACKING DRONE · HOLD IN WIND</span>
+  <!-- HERO: the robot is the skills map -->
+  <section class="hero" id="skills" aria-labelledby="hero-h">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="pill"><span class="pulse" aria-hidden="true"></span>Available for roles and freelance work</p>
+        <h1 id="hero-h">I build the brains of robots that <span class="rot" data-rotate="see.|move.|map the world.|fly.|learn.|work together.">see.</span></h1>
+        <p class="lead">Robotics and AI engineer in Genoa, Italy. Autonomy, perception, control and embedded software for drones, ground robots and anything else that moves.</p>
+        <div class="ctas">
+          <a class="btn btn--primary" href="#projects">Explore 22 projects <span aria-hidden="true">→</span></a>
+          <a class="btn btn--upwork" href="https://www.upwork.com/freelancers/~01a0793a19bbeb8d20" target="_blank" rel="noopener">Hire on Upwork</a>
+          <a class="btn btn--freelancer" href="https://www.freelancer.com/u/ahmedsalah99hop" target="_blank" rel="noopener">Hire on Freelancer</a>
+        </div>
+        <dl class="stats">
+          <div><dt>Professional</dt><dd>3 yrs</dd></div>
+          <div><dt>Freelancing</dt><dd>6 yrs</dd></div>
+          <div><dt>Projects</dt><dd>22</dd></div>
+          <div><dt>Ship landings</dt><dd>&gt;95%</dd></div>
+        </dl>
       </div>
-      <div class="hud__tr">
-        <span>ALT <b data-hud-alt>042.1</b> m</span>
-        <span>SPD <b data-hud-spd>03.2</b> m/s</span>
-        <span>MODE <b>AUTO</b></span>
-      </div>
-      <div class="hud__ladder"></div>
-    </div>
 
-    <div class="hero__copy">
-      <p class="eyebrow">Robotics and AI engineer · Genoa, Italy</p>
-      <h1 id="hero-h" class="hero__title">
-        <span class="hero__line">I build robots</span>
-        <span class="hero__line">that <span class="swap" data-swap="see.|fly in swarms.|land on ships.|map the world.|learn.">fly in swarms.</span></span>
-      </h1>
-      <p class="hero__lead">Drone autonomy, control, SLAM and deep learning, in C++, Python and ROS&nbsp;2. 22 projects below, each with its own page.</p>
-      <div class="hero__ctas">
-        <a class="btn btn--primary" href="#missions">See the projects <span aria-hidden="true">↓</span></a>
-        <a class="btn btn--upwork" href="https://www.upwork.com/freelancers/~01a0793a19bbeb8d20" target="_blank" rel="noopener">Hire on Upwork</a>
-        <a class="btn btn--ghost" href="https://www.freelancer.com/u/ahmedsalah99hop" target="_blank" rel="noopener">Hire on Freelancer</a>
-      </div>
+      <figure class="bot" aria-labelledby="bot-cap">
+        <figcaption id="bot-cap" class="bot__hint"><span class="hand" aria-hidden="true"></span>Point at a part of the robot to see the projects behind each skill</figcaption>
+        <svg class="bot__svg" viewBox="0 0 560 560" role="group" aria-label="A robot whose parts stand for skills">
+          <defs>
+            <linearGradient id="g-body" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--bot-hi)"/><stop offset="1" stop-color="var(--bot-lo)"/></linearGradient>
+            <radialGradient id="g-glow"><stop offset="0" stop-color="var(--accent)" stop-opacity=".55"/><stop offset="1" stop-color="var(--accent)" stop-opacity="0"/></radialGradient>
+          </defs>
+          <ellipse class="bot__shadow" cx="270" cy="520" rx="170" ry="16"/>
+
+          <!-- companion drone: robots and drones -->
+          <g class="part" data-skill="drones" tabindex="0" role="button" aria-label="Robots and drones">
+            <g class="drone">
+              <rect x="400" y="70" width="96" height="20" rx="10" class="fill"/>
+              <rect x="380" y="62" width="40" height="5" rx="2.5" class="prop"/><rect x="476" y="62" width="40" height="5" rx="2.5" class="prop"/>
+              <rect x="398" y="66" width="4" height="10" class="ink"/><rect x="494" y="66" width="4" height="10" class="ink"/>
+              <circle cx="448" cy="92" r="6" class="lens"/>
+            </g>
+          </g>
+
+          <!-- antenna: deep learning and AI -->
+          <g class="part" data-skill="ai" tabindex="0" role="button" aria-label="Deep learning and data">
+            <rect x="265" y="40" width="10" height="56" rx="5" class="ink"/>
+            <circle cx="270" cy="36" r="18" class="bulb"/>
+            <path d="M262 32c4-6 12-6 16 0M262 40c4 6 12 6 16 0M270 22v28" class="wire"/>
+          </g>
+
+          <!-- head with camera eyes: computer vision -->
+          <g class="part" data-skill="vision" tabindex="0" role="button" aria-label="Computer vision">
+            <rect x="170" y="94" width="200" height="132" rx="44" fill="url(#g-body)" class="shell"/>
+            <rect x="196" y="122" width="148" height="76" rx="34" class="visor"/>
+            <g class="eyes"><circle cx="236" cy="160" r="20" class="eye-w"/><circle cx="304" cy="160" r="20" class="eye-w"/>
+              <circle cx="236" cy="160" r="9" class="pupil" data-eye/><circle cx="304" cy="160" r="9" class="pupil" data-eye/></g>
+          </g>
+
+          <!-- lidar puck: SLAM and estimation -->
+          <g class="part" data-skill="slam" tabindex="0" role="button" aria-label="SLAM and estimation">
+            <rect x="330" y="76" width="56" height="30" rx="8" fill="url(#g-body)" class="shell"/>
+            <rect x="334" y="84" width="48" height="10" rx="5" class="lidar"/>
+            <g class="beams"><path d="M386 89 L 470 60 M386 89 L 480 100 M386 89 L 460 140"/></g>
+          </g>
+
+          <!-- torso with code screen: software and DevOps -->
+          <g class="part" data-skill="software" tabindex="0" role="button" aria-label="Software and DevOps">
+            <rect x="180" y="238" width="180" height="168" rx="36" fill="url(#g-body)" class="shell"/>
+            <rect x="204" y="262" width="132" height="84" rx="14" class="screen"/>
+            <text x="270" y="314" text-anchor="middle" class="code">&lt;/&gt;</text>
+            <rect x="214" y="360" width="34" height="10" rx="5" class="led led--a"/><rect x="254" y="360" width="34" height="10" rx="5" class="led led--b"/><rect x="294" y="360" width="34" height="10" rx="5" class="led led--c"/>
+          </g>
+
+          <!-- side circuit pack: embedded and real-time -->
+          <g class="part" data-skill="embedded" tabindex="0" role="button" aria-label="Embedded and real-time">
+            <rect x="116" y="262" width="60" height="104" rx="14" class="pcb"/>
+            <rect x="130" y="290" width="32" height="32" rx="4" class="chip"/>
+            <path d="M126 298h4M126 306h4M126 314h4M162 298h4M162 306h4M162 314h4M138 286v4M146 286v4M154 286v4M138 322v4M146 322v4M154 322v4" class="pins"/>
+            <circle cx="146" cy="346" r="5" class="led led--b"/>
+          </g>
+
+          <!-- arm with gripper: control and guidance -->
+          <g class="part" data-skill="control" tabindex="0" role="button" aria-label="Control and guidance">
+            <g class="arm">
+              <circle cx="372" cy="270" r="16" class="joint"/>
+              <rect x="370" y="258" width="92" height="24" rx="12" fill="url(#g-body)" class="shell" transform="rotate(-28 372 270)"/>
+              <circle cx="452" cy="227" r="13" class="joint"/>
+              <rect x="446" y="221" width="70" height="20" rx="10" fill="url(#g-body)" class="shell" transform="rotate(32 452 227)"/>
+              <path d="M506 262 l18 -6 M506 262 l14 14" class="grip"/>
+            </g>
+          </g>
+
+          <!-- base on wheels (part of robots) -->
+          <g class="part" data-skill="drones" tabindex="-1" aria-hidden="true">
+            <rect x="160" y="414" width="220" height="66" rx="26" fill="url(#g-body)" class="shell"/>
+            <circle cx="206" cy="486" r="28" class="wheel"/><circle cx="334" cy="486" r="28" class="wheel"/>
+            <circle cx="206" cy="486" r="9" class="hub"/><circle cx="334" cy="486" r="9" class="hub"/>
+          </g>
+        </svg>
+
+        <div class="bot__card" aria-live="polite">
+          <p class="bot__skill" data-bot-skill>Hover the robot</p>
+          <p class="bot__n" data-bot-n>Each part is a skill, backed by real projects.</p>
+          <ul class="bot__list" data-bot-list></ul>
+          <button type="button" class="btn btn--ghost btn--sm" data-bot-go hidden>Show these projects <span aria-hidden="true">↓</span></button>
+        </div>
+      </figure>
     </div>
-    <ul class="hero__readout" aria-label="Highlights">
-      <li><b>&gt;95%</b><span>ship-deck landings in storm scenarios</span></li>
-      <li><b>5</b><span>PX4 drones from one command</span></li>
-      <li><b>2.5 yrs</b><span>professional C++</span></li>
-      <li><b>2020</b><span>freelancing since</span></li>
-    </ul>
   </section>
 
-  <!-- SKILL TICKER -->
-  <div class="ticker" aria-hidden="true"><div class="ticker__track">
-    <span>ROS 2</span><span>PX4</span><span>ArduPilot</span><span>MAVLink</span><span>C++17</span><span>Python</span><span>SLAM</span><span>EKF / VIO</span><span>MPC</span><span>Visual servoing</span><span>YOLO</span><span>OC-SORT</span><span>PyTorch</span><span>ONNX</span><span>OpenCV</span><span>Docker</span><span>Gazebo</span><span>Nav2</span><span>PlanSys2</span><span>Yocto</span><span>AUTOSAR</span><span>dsPIC33</span>
-    <span>ROS 2</span><span>PX4</span><span>ArduPilot</span><span>MAVLink</span><span>C++17</span><span>Python</span><span>SLAM</span><span>EKF / VIO</span><span>MPC</span><span>Visual servoing</span><span>YOLO</span><span>OC-SORT</span><span>PyTorch</span><span>ONNX</span><span>OpenCV</span><span>Docker</span><span>Gazebo</span><span>Nav2</span><span>PlanSys2</span><span>Yocto</span><span>AUTOSAR</span><span>dsPIC33</span>
-  </div></div>
+  <!-- the tools, rolling -->
+  <div class="marquee" aria-label="Tools I use">
+    <div class="marquee__track">
+      <span>ROS 2</span><span>PX4</span><span>ArduPilot</span><span>MAVLink</span><span>Nav2</span><span>C++17</span><span>Python</span><span>PyTorch</span><span>ONNX Runtime</span><span>OpenCV</span><span>YOLO</span><span>SLAM</span><span>EKF · VIO</span><span>MPC</span><span>Gazebo</span><span>Docker</span><span>CMake</span><span>Yocto</span><span>AUTOSAR</span><span>Linux</span>
+      <span aria-hidden="true">ROS 2</span><span aria-hidden="true">PX4</span><span aria-hidden="true">ArduPilot</span><span aria-hidden="true">MAVLink</span><span aria-hidden="true">Nav2</span><span aria-hidden="true">C++17</span><span aria-hidden="true">Python</span><span aria-hidden="true">PyTorch</span><span aria-hidden="true">ONNX Runtime</span><span aria-hidden="true">OpenCV</span><span aria-hidden="true">YOLO</span><span aria-hidden="true">SLAM</span><span aria-hidden="true">EKF · VIO</span><span aria-hidden="true">MPC</span><span aria-hidden="true">Gazebo</span><span aria-hidden="true">Docker</span><span aria-hidden="true">CMake</span><span aria-hidden="true">Yocto</span><span aria-hidden="true">AUTOSAR</span><span aria-hidden="true">Linux</span>
+    </div>
+  </div>
 
-  <!-- MISSIONS: every project, filterable; each card opens its own page -->
-  <section class="missions" id="missions" aria-labelledby="missions-h">
+  <!-- PROJECTS -->
+  <section class="sec" id="projects" aria-labelledby="projects-h">
     <div class="wrap">
-      <header class="sec-head">
-        <p class="eyebrow">Projects · <span data-shown>22</span> shown</p>
-        <h2 id="missions-h">Proof, not a skills list.</h2>
-        <p class="sec-head__lead">Pick a skill and the projects that use it light up. Open any card for clips, results and code.</p>
+      <header class="sec__head">
+        <p class="kicker">Projects</p>
+        <h2 id="projects-h">Proof over promises.</h2>
+        <p class="sec__lead">Filter by skill. Every card opens a full page with clips, results and code.</p>
       </header>
       <div class="filters" role="group" aria-label="Filter projects by skill" data-filters></div>
+      <p class="shown" aria-live="polite"><span data-shown>22</span> projects</p>
       <div class="grid" data-grid></div>
     </div>
   </section>
 
-  <!-- FREELANCE: the two profiles, impossible to miss -->
-  <section class="freelance" id="hire" aria-labelledby="hire-h">
+  <!-- SHOWREEL -->
+  <section class="sec reel" id="reel" aria-labelledby="reel-h">
     <div class="wrap">
-      <header class="sec-head">
-        <p class="eyebrow">Freelance since 2020</p>
-        <h2 id="hire-h">Hire me for your next robot, model or app.</h2>
-        <p class="sec-head__lead">Drone and robot software, computer vision, deep learning, data pipelines and web apps. Send a brief on either platform.</p>
+      <header class="sec__head sec__head--row">
+        <div><p class="kicker">Showreel</p><h2 id="reel-h">20 seconds of robots at work.</h2></div>
+        <p class="sec__lead">A drone holding position in wind, a PX4 swarm in formation, real-time segmentation and a mobile robot on a planned mission.</p>
+      </header>
+      <div class="reel__frame">
+        <video data-reel muted loop playsinline preload="metadata" poster="assets/media/reel.jpg" aria-label="Showreel of four robotics projects">
+          <source src="assets/media/reel.webm" type="video/webm"><source src="assets/media/reel.mp4" type="video/mp4">
+        </video>
+        <button type="button" class="reel__play" data-reel-toggle aria-label="Pause the showreel"><span aria-hidden="true"></span></button>
+        <ol class="reel__chapters" aria-hidden="true">
+          <li data-at="0">Tracking drone</li><li data-at="6.2">PX4 swarm</li><li data-at="10.6">YOLOs-CPP</li><li data-at="15">Marker mission</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIRE -->
+  <section class="sec hire" id="hire" aria-labelledby="hire-h">
+    <div class="wrap">
+      <header class="sec__head">
+        <p class="kicker">Freelance for 6 years</p>
+        <h2 id="hire-h">Got a robot, a model or an app to build?</h2>
+        <p class="sec__lead">Robot software, computer vision, deep learning, data pipelines and web apps. Message me on the platform you prefer.</p>
       </header>
       <div class="platforms">
         <a class="platform platform--upwork" href="https://www.upwork.com/freelancers/~01a0793a19bbeb8d20" target="_blank" rel="noopener">
           <svg class="platform__logo" viewBox="-0.48 3.012 24.96 17.976" aria-hidden="true"><path fill="currentColor" d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
           <span class="platform__name">Upwork</span>
-          <span class="platform__line">See my profile, reviews and work history</span>
-          <span class="platform__go">Open Upwork profile <span aria-hidden="true">↗</span></span>
+          <span class="platform__line">Profile, reviews and work history</span>
+          <span class="platform__go">Hire me on Upwork <span aria-hidden="true">↗</span></span>
         </a>
         <a class="platform platform--freelancer" href="https://www.freelancer.com/u/ahmedsalah99hop" target="_blank" rel="noopener">
           <svg class="platform__logo" viewBox="-0.48 2.596 24.96 18.808" aria-hidden="true"><path fill="currentColor" d="M14.096 3.076l1.634 2.292L24 3.076M5.503 20.924l4.474-4.374-2.692-2.89m6.133-10.584L11.027 5.23l4.022.15M4.124 3.077l.857 1.76 4.734.294m-3.058 7.072l3.497-6.522L0 5.13m7.064 7.485l3.303 3.548 3.643-3.57 1.13-6.652-4.439-.228Z"/></svg>
           <span class="platform__name">Freelancer</span>
-          <span class="platform__line">See my profile, reviews and work history</span>
-          <span class="platform__go">Open Freelancer profile <span aria-hidden="true">↗</span></span>
+          <span class="platform__line">Profile, reviews and work history</span>
+          <span class="platform__go">Hire me on Freelancer <span aria-hidden="true">↗</span></span>
         </a>
         <a class="platform platform--mail" href="mailto:ahmed.msalah99@gmail.com?subject=Project%20for%20Ahmed">
-          <svg class="platform__logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M3 5.5h18v13H3zM3 6l9 7 9-7"/></svg>
+          <svg class="platform__logo" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M3 5.5h18v13H3zM3 6l9 7 9-7"/></svg>
           <span class="platform__name">Email</span>
-          <span class="platform__line">Full-time roles, or work outside the platforms</span>
+          <span class="platform__line">Full-time roles, or anything off-platform</span>
           <span class="platform__go">ahmed.msalah99@gmail.com</span>
         </a>
       </div>
     </div>
   </section>
 
-  <!-- FLIGHT LOG: experience as a route with waypoints -->
-  <section class="flight" id="flight-log" aria-labelledby="flight-h">
-    <div class="wrap">
-      <header class="sec-head">
-        <p class="eyebrow">Flight log</p>
-        <h2 id="flight-h">Where I have flown so far.</h2>
+  <!-- EXPERIENCE -->
+  <section class="sec" id="experience" aria-labelledby="exp-h">
+    <div class="wrap exp">
+      <header class="sec__head">
+        <p class="kicker">Experience</p>
+        <h2 id="exp-h">3 years in industry. 6 years freelancing.</h2>
       </header>
-      <ol class="route">
-        <li class="wp"><span class="wp__t">2020 → now</span><h3>Freelance developer and deep learning engineer</h3><p>Vision, medical imaging, NLP, data and web apps for clients, Germany included.</p></li>
-        <li class="wp"><span class="wp__t">2022 → 2024</span><h3>Embedded software engineer · Appraid-Tech for Honda</h3><p>Safety-critical Adaptive AUTOSAR gateway in MISRA C++, verified on target in Japan. Mentored 2 engineers.</p></li>
-        <li class="wp"><span class="wp__t">2024 → 2026</span><h3>MSc Robotics Engineering · University of Genoa</h3><p>Thesis: visual-servoed autonomous landing of a UAV on a catamaran.</p></li>
-        <li class="wp"><span class="wp__t">2025 → 2026</span><h3>Research · LAAS-CNRS, remote</h3><p>Robust MPC from scratch with a wind disturbance observer.</p></li>
-        <li class="wp wp--now"><span class="wp__t">2025 → 2026</span><h3>Robotics software engineer · Hertel Robotics</h3><p>Ship-deck landing autonomy in C++ and ROS&nbsp;2 on PX4, over 95% success in 4 storm scenarios.</p></li>
+      <ol class="timeline">
+        <li class="is-now"><span class="when">2025 – 2026</span><div><h3>Robotics software engineer</h3><p class="where">Hertel Robotics · remote, Portugal</p><p>Autonomy for a multirotor landing on a moving ship deck: state estimation, guidance and the mission state machine in C++ and ROS&nbsp;2 on PX4. Over 95% success in 4 storm scenarios.</p></div></li>
+        <li><span class="when">2025 – 2026</span><div><h3>Research collaboration</h3><p class="where">LAAS-CNRS · remote, Toulouse</p><p>Robust model predictive control from scratch, with a wind disturbance observer.</p></div></li>
+        <li><span class="when">2024 – 2027</span><div><h3>MSc Robotics Engineering</h3><p class="where">University of Genoa</p><p>Thesis: visual-servoed autonomous landing of a UAV on a catamaran.</p></div></li>
+        <li><span class="when">2022 – 2024</span><div><h3>Embedded software engineer</h3><p class="where">Appraid-Tech, for Honda · Egypt</p><p>A safety-critical Adaptive AUTOSAR gateway in MISRA C++, verified on target hardware in Japan. Mentored 2 engineers.</p></div></li>
+        <li><span class="when">2020 – now</span><div><h3>Freelance developer and deep learning engineer</h3><p class="where">Upwork, Freelancer and direct clients</p><p>Vision, medical imaging, NLP, data and web apps, including a call-centre automation for a company in Germany.</p></div></li>
+        <li><span class="when">2017 – 2022</span><div><h3>BSc Communication and Information Engineering</h3><p class="where">Zewail City of Science and Technology</p></div></li>
       </ol>
       <dl class="facts">
         <div><dt>Start</dt><dd>Available now</dd></div>
-        <div><dt>Work permit</dt><dd>Italy: no sponsorship needed (permit to 07/2027, converts outside the quota)</dd></div>
-        <div><dt>Location</dt><dd>Genoa · remote · relocation in Europe, Saudi Arabia, Egypt</dd></div>
+        <div><dt>Work permit</dt><dd>No sponsorship needed in Italy; elsewhere the employer sponsors one</dd></div>
+        <div><dt>Location</dt><dd>Genoa, remote, or a move within Europe, Saudi Arabia or Egypt</dd></div>
         <div><dt>Languages</dt><dd>Arabic native · English C1 · Italian A2</dd></div>
       </dl>
     </div>
   </section>
 </main>
 
-<footer class="end" id="contact">
+<footer class="foot" id="contact">
   <div class="wrap">
-    <p class="end__big">Let's build<br>something that flies.</p>
-    <div class="end__row">
+    <p class="foot__big">Let's build a robot<br>people talk about.</p>
+    <div class="ctas">
       <a class="btn btn--upwork" href="https://www.upwork.com/freelancers/~01a0793a19bbeb8d20" target="_blank" rel="noopener">Hire on Upwork</a>
-      <a class="btn btn--ghost" href="https://www.freelancer.com/u/ahmedsalah99hop" target="_blank" rel="noopener">Hire on Freelancer</a>
-      <a class="btn btn--ghost" href="mailto:ahmed.msalah99@gmail.com?subject=Hello%20Ahmed">Email</a>
+      <a class="btn btn--freelancer" href="https://www.freelancer.com/u/ahmedsalah99hop" target="_blank" rel="noopener">Hire on Freelancer</a>
+      <a class="btn btn--ghost" href="mailto:ahmed.msalah99@gmail.com?subject=Hello%20Ahmed">Email me</a>
     </div>
-    <div class="end__links">
+    <div class="foot__row">
       <a href="https://github.com/ahmedmsalah99" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/ahmed-salah-a214a116a/" target="_blank" rel="noopener">LinkedIn</a>
-      <span>Press <kbd>~</kbd> for the terminal</span>
+      <a href="credits.html">Image credits</a>
       <span>© 2026 Ahmed Yousef</span>
     </div>
-    <p class="end__credit">Clips from the project repositories. Lidar illustration: Graham Murdoch, Popular Science. Product names are trademarks of their owners.</p>
   </div>
 </footer>
 
-<!-- the lock-on reticle that follows the pointer and snaps to project cards -->
-<div class="reticle" aria-hidden="true"><span class="reticle__label"></span></div>
-
-<!-- the terminal (press ~) -->
-<div class="term" role="dialog" aria-modal="true" aria-label="Terminal" hidden>
-  <div class="term__win">
-    <div class="term__bar"><span>ahmed@portfolio: ~</span><button type="button" data-term-close aria-label="Close the terminal">×</button></div>
-    <div class="term__out" data-term-out></div>
-    <form class="term__in" data-term-form><label for="term-input">$</label><input id="term-input" autocomplete="off" spellcheck="false" aria-label="Command"></form>
-  </div>
-</div>
-
 <script src="assets/projects.js"></script>
-<script src="assets/hud.js"></script>
+<script src="assets/site.js"></script>
 </body>
 </html>
