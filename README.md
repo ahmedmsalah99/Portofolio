@@ -1,20 +1,20 @@
 # Ahmed Yousef — portfolio
 
-A robotics and AI portfolio styled like a drone's camera HUD.
+A robotics and AI portfolio: professional, with a playful robot at its heart. Light by default with a dark-mode switch.
 
-- **Showreel hero**: a colour-graded reel cut from the project clips (tracking drone, PX4 swarm, YOLOs-CPP, SARSA swarm), with live HUD readouts and the headline "I build robots that see / fly in swarms / land on ships…".
-- **Hire, everywhere**: Upwork in the top bar, Upwork and Freelancer in the hero, a big freelance section, the footer and every project page.
-- **Project grid**: 22 projects as cards; big cards play their clip, all play on hover. Filter by skill with the chips or keys `1`–`7` (`0` for all). The pointer is a reticle that locks onto cards with a detection label.
-- **A page per project**: `project.html?p=<slug>` with a large clip, metrics, mission brief, what was built, stack, gallery with lightbox, links and next/previous (also `←`/`→`).
-- **Flight log**: experience as a route with waypoints, plus quick answers for recruiters.
-- **Terminal**: press `~` (or the `>_` button) and try `help`, `ls`, `open 3`, `grep slam`, `hire`, `sudo hire ahmed`.
+- **The robot is the skills map**: point at a part (camera eyes = vision, lidar = SLAM, arm = control, chest screen = software, circuit pack = embedded, antenna = AI, companion drone = robots and drones) to see the projects that prove that skill; "Show these projects" filters the grid.
+- **Hire, everywhere**: Upwork in the top bar, Upwork and Freelancer in the hero, a hire section, the footer and every project page.
+- **Project grid**: 22 cards with clips or photos, filterable by skill (`?skill=<id>` links are shareable).
+- **A page per project**: `project.html?p=<slug>` with a large clip or photo, metrics, the brief, what I built, stack, gallery with lightbox, related projects and previous/next (`←`/`→`).
+- **Showreel, experience and quick answers** for recruiters.
+- **Image credits** in `credits.html`; stock photos are openly licensed from Wikimedia Commons.
 
 ## Files
 
-- `site/index.html`, `site/project.html`: the two pages.
+- `site/index.html`, `site/project.html`, `site/credits.html`: the pages.
 - `site/assets/projects.js`: **every project lives here** (title, skills, metrics, text, media, gallery, links). The grid, filters, terminal and project pages are all generated from it.
-- `site/assets/hud.css`, `site/assets/hud.js`: styles and behaviour.
-- `site/assets/media/`: clips (`.webm` + `.mp4` + `.jpg` poster per clip) and stills.
+- `site/assets/site.css`, `site/assets/site.js`: styles and behaviour.
+- `site/assets/media/`: clips (`.webm` + `.mp4` + `.jpg` poster per clip), `photos/` (credited stock photos) and `gallery/` stills.
 
 Preview locally: `python3 -m http.server -d site`, then open http://localhost:8000.
 
