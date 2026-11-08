@@ -3,7 +3,7 @@ name: Deploy site to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ["site/**", ".github/workflows/pages.yml"]
+    paths: ["site/**", "tools/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 
 permissions:
@@ -22,7 +22,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
+      # pre-render project pages, the home grid, the sitemap and robots.txt from site/assets/projects.js
+      - name: Build pages
+        run: node tools/build.mjs
+      # stamp this deploy's commit into every ?v= link, so browsers fetch the new files instead of cached ones
+      - name: Version assets
+        run: sed -i "s/ASSETVER/${GITHUB_SHA::7}/g" site/*.html
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

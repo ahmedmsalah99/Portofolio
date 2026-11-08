@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Project · Ahmed Yousef</title>
 <meta name="description" content="A robotics or AI project by Ahmed Yousef, with clips, results and code.">
+<meta name="robots" content="noindex, follow">
 <meta name="theme-color" content="#f4f2ec">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.svg?v=ASSETVER" type="image/svg+xml">
 <script>try{const t=localStorage.getItem('theme');if(t==='dark')document.documentElement.dataset.theme='dark'}catch(e){}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css">
+<link rel="stylesheet" href="assets/site.css?v=ASSETVER">
 </head>
 <body class="project">
 <a class="skip" href="#brief">Skip to the project</a>
@@ -59,7 +60,9 @@
   <div class="lightbox__stage"></div>
 </div>
 
-<script src="assets/projects.js"></script>
-<script src="assets/site.js"></script>
+<script>window.ASSET_VERSION = 'ASSETVER';</script>
+<script src="assets/projects.js?v=ASSETVER"></script>
+<script src="assets/render.js?v=ASSETVER"></script>
+<script src="assets/site.js?v=ASSETVER"></script>
 </body>
 </html>

@@ -11,12 +11,27 @@ A robotics and AI portfolio: professional, with a playful robot at its heart. Li
 
 ## Files
 
-- `site/index.html`, `site/project.html`, `site/credits.html`: the pages.
-- `site/assets/projects.js`: **every project lives here** (title, skills, metrics, text, media, gallery, links). The grid, filters, terminal and project pages are all generated from it.
+- `site/index.html`, `site/credits.html`: the home and credits pages.
+- `site/assets/projects.js`: **every project lives here** (title, skills, metrics, text, media, gallery, links, and the How it works / Engineering decisions write-ups in `DETAILS`).
+- `site/assets/render.js`: the HTML builders shared by the browser and the build script.
 - `site/assets/site.css`, `site/assets/site.js`: styles and behaviour.
-- `site/assets/media/`: clips (`.webm` + `.mp4` + `.jpg` poster per clip), `photos/` (credited stock photos) and `gallery/` stills.
+- `site/project.html`: the template for project pages (old `project.html?p=<slug>` links redirect to `<slug>.html`).
+- `site/<slug>.html`, `site/sitemap.xml`, `site/robots.txt`: **generated** by `node tools/build.mjs`.
+- `site/assets/media/`: clips (`.webm` + `.mp4` + `.jpg` poster per clip), `photos/` (credited stock photos), `illustrations/` and `gallery/` stills.
 
-Preview locally: `python3 -m http.server -d site`, then open http://localhost:8000.
+## After editing projects
+
+```bash
+node tools/build.mjs
+```
+
+This writes a static page per project (own title, description, canonical URL, Open Graph image, schema.org data and full content), fills the project grid on the home page, the credits list, `sitemap.xml` and `robots.txt`. The deploy runs it again, so the live site is always in sync, but run it locally to preview.
+
+## Caching and SEO
+
+- Every CSS, JS and media link carries `?v=ASSETVER`; the deploy replaces it with the commit ID, so browsers fetch new files after each deploy.
+- The home page has a schema.org `Person` (with GitHub, LinkedIn, Upwork and Freelancer as `sameAs`), Open Graph and Twitter cards; each project page has `SoftwareSourceCode` or `CreativeWork` data and breadcrumbs.
+- To get indexed faster, add the site in Google Search Console and submit `https://ahmedmsalah99.github.io/Portofolio/sitemap.xml`.
 
 ## Add a clip from a GIF
 

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /Portofolio/project.html
+
+Sitemap: https://ahmedmsalah99.github.io/Portofolio/sitemap.xml
