@@ -388,3 +388,17 @@ p { margin: 0; }
 
 /* illustrations are shown whole on their own dark ground, never cropped */
 .card__media img[src$=".svg"], .p-stage img[src$=".svg"], .gal img[src$=".svg"] { object-fit: contain; background: #14171b; }
+
+/* GitHub and LinkedIn, styled like the Upwork and Freelancer buttons and cards */
+.btn--github { background: #24292f; color: #fff; }
+.btn--linkedin { background: #0a66c2; color: #fff; }
+[data-theme="dark"] .btn--github { background: #f1f0ec; color: #16181b; }
+.platforms { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.platform--upwork, .platform--freelancer { grid-column: span 3; }
+.platform--github, .platform--linkedin, .platform--mail { grid-column: span 2; }
+.platform--github { background: linear-gradient(135deg, #3b434c, #1b1f24); color: #fff; }
+.platform--linkedin { background: linear-gradient(135deg, #2c86e0, #0a4f97); color: #fff; }
+.platform--github .platform__name, .platform--linkedin .platform__name, .platform--mail .platform__name { font-size: clamp(32px, 3vw, 44px); }
+@media (max-width: 900px) { .platforms { grid-template-columns: 1fr; } .platform--upwork, .platform--freelancer, .platform--github, .platform--linkedin, .platform--mail { grid-column: auto; } }
+.foot .btn--github { background: #f1f0ec; color: #16181b; }
+[data-theme="dark"] .foot .btn--github { background: #24292f; color: #fff; }
